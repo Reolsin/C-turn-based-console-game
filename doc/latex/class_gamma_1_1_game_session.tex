@@ -1,0 +1,113 @@
+\doxysection{Gamma::\+Game\+Session Class Reference}
+\hypertarget{class_gamma_1_1_game_session}{}\label{class_gamma_1_1_game_session}\index{Gamma::GameSession@{Gamma::GameSession}}
+
+
+{\ttfamily \+\#include $<$Session.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_game_session_a6b5e4df411d2b580206998a7c5d2cc18}{Game\+Session}} ()
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_game_session_af1bfbb373a588a9fb84b0d9c83382640}{Game\+Session}} (std::\+ifstream \&)
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_game_session_a13f91583aaee1462db49f9679b54ff52}{\texorpdfstring{$\sim$}{\string~}\+Game\+Session}} ()
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_unit}{Unit}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_gamma_1_1_game_session_ab3f4b4f347f92730eabf1896e60dc905}{alive\+\_\+unit\+\_\+here}} (const \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}} \&) const
+\item 
+My\+\_\+vector$<$ \doxymbox{\hyperlink{class_gamma_1_1_unit}{Unit}} \texorpdfstring{$\ast$}{*} $>$ \doxymbox{\hyperlink{class_gamma_1_1_game_session_ac1c06470ed687002932a632350b1ef9a}{dead\+\_\+units\+\_\+here}} (const \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}} \&p) const
+\item 
+bool \doxymbox{\hyperlink{class_gamma_1_1_game_session_aba4bc28bccd3942a4c85a61ac632bfb0}{current\+\_\+unit\+\_\+is\+\_\+alive}} () const
+\item 
+My\+\_\+vector$<$ My\+\_\+vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_gamma_1_1_game_session_adb31b9729a8cc5c1e69546ca47498c4b}{render\+\_\+vision}} (const \doxymbox{\hyperlink{class_gamma_1_1_unit}{Unit}} \texorpdfstring{$\ast$}{*}unit) const
+\item 
+bool \doxymbox{\hyperlink{class_gamma_1_1_game_session_ad5f6beec31781bde92d180161c61f86e}{execute}} (int button)
+\item 
+bool \doxymbox{\hyperlink{class_gamma_1_1_game_session_a213dd9d78fd5df7bbc9f2e87891e7213}{game\+\_\+end\+\_\+check}} () const
+\item 
+void \doxymbox{\hyperlink{class_gamma_1_1_game_session_af579a4a1f05d07aa83e769a0bfa435d5}{draw}} () const
+\item 
+bool \doxymbox{\hyperlink{class_gamma_1_1_game_session_a63f7e3a0887ca52e66fbbac4dda5a23e}{save}} (std::\+ofstream \&)
+\end{DoxyCompactItemize}
+
+
+\label{class_gamma_1_1_game_session_doc-constructors}
+\Hypertarget{class_gamma_1_1_game_session_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_gamma_1_1_game_session_a6b5e4df411d2b580206998a7c5d2cc18}\index{Gamma::GameSession@{Gamma::GameSession}!GameSession@{GameSession}}
+\index{GameSession@{GameSession}!Gamma::GameSession@{Gamma::GameSession}}
+\doxysubsubsection{\texorpdfstring{GameSession()}{GameSession()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_session_a6b5e4df411d2b580206998a7c5d2cc18} 
+Gamma::\+\+Game\+Session::\+\+Game\+Session (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_gamma_1_1_game_session_af1bfbb373a588a9fb84b0d9c83382640}\index{Gamma::GameSession@{Gamma::GameSession}!GameSession@{GameSession}}
+\index{GameSession@{GameSession}!Gamma::GameSession@{Gamma::GameSession}}
+\doxysubsubsection{\texorpdfstring{GameSession()}{GameSession()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_session_af1bfbb373a588a9fb84b0d9c83382640} 
+Game\+Session::\+\+Game\+Session (\begin{DoxyParamCaption}\item[{std::\+ifstream \&}]{file}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_gamma_1_1_game_session_a13f91583aaee1462db49f9679b54ff52}\index{Gamma::GameSession@{Gamma::GameSession}!````~GameSession@{\texorpdfstring{$\sim$}{\string~}GameSession}}
+\index{````~GameSession@{\texorpdfstring{$\sim$}{\string~}GameSession}!Gamma::GameSession@{Gamma::GameSession}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GameSession()}{\string~GameSession()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_session_a13f91583aaee1462db49f9679b54ff52} 
+Game\+Session::\+\texorpdfstring{$\sim$}{\string~}\+Game\+Session (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{class_gamma_1_1_game_session_doc-func-members}
+\Hypertarget{class_gamma_1_1_game_session_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_gamma_1_1_game_session_ab3f4b4f347f92730eabf1896e60dc905}\index{Gamma::GameSession@{Gamma::GameSession}!alive\_unit\_here@{alive\_unit\_here}}
+\index{alive\_unit\_here@{alive\_unit\_here}!Gamma::GameSession@{Gamma::GameSession}}
+\doxysubsubsection{\texorpdfstring{alive\_unit\_here()}{alive\_unit\_here()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_session_ab3f4b4f347f92730eabf1896e60dc905} 
+\doxymbox{\hyperlink{class_gamma_1_1_unit}{Unit}} \texorpdfstring{$\ast$}{*} Game\+Session::\+alive\+\_\+unit\+\_\+here (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}} \&}]{p}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_gamma_1_1_game_session_aba4bc28bccd3942a4c85a61ac632bfb0}\index{Gamma::GameSession@{Gamma::GameSession}!current\_unit\_is\_alive@{current\_unit\_is\_alive}}
+\index{current\_unit\_is\_alive@{current\_unit\_is\_alive}!Gamma::GameSession@{Gamma::GameSession}}
+\doxysubsubsection{\texorpdfstring{current\_unit\_is\_alive()}{current\_unit\_is\_alive()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_session_aba4bc28bccd3942a4c85a61ac632bfb0} 
+bool Gamma::\+\+Game\+Session::\+current\+\_\+unit\+\_\+is\+\_\+alive (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_gamma_1_1_game_session_ac1c06470ed687002932a632350b1ef9a}\index{Gamma::GameSession@{Gamma::GameSession}!dead\_units\_here@{dead\_units\_here}}
+\index{dead\_units\_here@{dead\_units\_here}!Gamma::GameSession@{Gamma::GameSession}}
+\doxysubsubsection{\texorpdfstring{dead\_units\_here()}{dead\_units\_here()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_session_ac1c06470ed687002932a632350b1ef9a} 
+My\+\_\+vector$<$ \doxymbox{\hyperlink{class_gamma_1_1_unit}{Unit}} \texorpdfstring{$\ast$}{*} $>$ Game\+Session::\+dead\+\_\+units\+\_\+here (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}} \&}]{p}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_gamma_1_1_game_session_af579a4a1f05d07aa83e769a0bfa435d5}\index{Gamma::GameSession@{Gamma::GameSession}!draw@{draw}}
+\index{draw@{draw}!Gamma::GameSession@{Gamma::GameSession}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_session_af579a4a1f05d07aa83e769a0bfa435d5} 
+void Game\+Session::\+draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_gamma_1_1_game_session_ad5f6beec31781bde92d180161c61f86e}\index{Gamma::GameSession@{Gamma::GameSession}!execute@{execute}}
+\index{execute@{execute}!Gamma::GameSession@{Gamma::GameSession}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_session_ad5f6beec31781bde92d180161c61f86e} 
+bool Gamma::\+\+Game\+Session::\+execute (\begin{DoxyParamCaption}\item[{int}]{button}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_gamma_1_1_game_session_a213dd9d78fd5df7bbc9f2e87891e7213}\index{Gamma::GameSession@{Gamma::GameSession}!game\_end\_check@{game\_end\_check}}
+\index{game\_end\_check@{game\_end\_check}!Gamma::GameSession@{Gamma::GameSession}}
+\doxysubsubsection{\texorpdfstring{game\_end\_check()}{game\_end\_check()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_session_a213dd9d78fd5df7bbc9f2e87891e7213} 
+bool Game\+Session::\+game\+\_\+end\+\_\+check (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_gamma_1_1_game_session_adb31b9729a8cc5c1e69546ca47498c4b}\index{Gamma::GameSession@{Gamma::GameSession}!render\_vision@{render\_vision}}
+\index{render\_vision@{render\_vision}!Gamma::GameSession@{Gamma::GameSession}}
+\doxysubsubsection{\texorpdfstring{render\_vision()}{render\_vision()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_session_adb31b9729a8cc5c1e69546ca47498c4b} 
+My\+\_\+vector$<$ My\+\_\+vector$<$ char $>$ $>$ Game\+Session::\+render\+\_\+vision (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_gamma_1_1_unit}{Unit}} \texorpdfstring{$\ast$}{*}}]{unit}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_gamma_1_1_game_session_a63f7e3a0887ca52e66fbbac4dda5a23e}\index{Gamma::GameSession@{Gamma::GameSession}!save@{save}}
+\index{save@{save}!Gamma::GameSession@{Gamma::GameSession}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_session_a63f7e3a0887ca52e66fbbac4dda5a23e} 
+bool Game\+Session::\+save (\begin{DoxyParamCaption}\item[{std::\+ofstream \&}]{ofile}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+src/\+\doxymbox{\hyperlink{_session_8h}{Session.\+h}}\item 
+src/\+\doxymbox{\hyperlink{_session_8cpp}{Session.\+cpp}}\end{DoxyCompactItemize}

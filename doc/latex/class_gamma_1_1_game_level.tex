@@ -1,0 +1,124 @@
+\doxysection{Gamma::\+Game\+Level Class Reference}
+\hypertarget{class_gamma_1_1_game_level}{}\label{class_gamma_1_1_game_level}\index{Gamma::GameLevel@{Gamma::GameLevel}}
+
+
+{\ttfamily \+\#include $<$Session.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_game_level_a69f86db6205951906c980a327aef5de3}{Game\+Level}} (int l\+\_\+=100, int h\+\_\+=100)
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_game_level_af615a65e4c3ae979d963e1b7dbac05b1}{Game\+Level}} (std::\+ifstream \&)
+\item 
+My\+\_\+vector$<$ \doxymbox{\hyperlink{class_gamma_1_1_item}{Item}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_gamma_1_1_game_level_aaeb714df7319d075d5d12d862c811a96}{get\+\_\+items}} (const \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}} \&p)
+\item 
+bool \doxymbox{\hyperlink{class_gamma_1_1_game_level_a33f3a501c9f4c1c5260beb6c1abccb2a}{add\+\_\+item}} (\doxymbox{\hyperlink{class_gamma_1_1_item}{Item}} \texorpdfstring{$\ast$}{*}, int, int)
+\item 
+\doxymbox{\hyperlink{struct_gamma_1_1_cell}{Cell}} \& \doxymbox{\hyperlink{class_gamma_1_1_game_level_a24af08c394dc70dae11e6b1f277f4f80}{operator\+[$\,$]\+}} (const \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}} \&)
+\item 
+const \doxymbox{\hyperlink{struct_gamma_1_1_cell}{Cell}} \& \doxymbox{\hyperlink{class_gamma_1_1_game_level_ac712ce1b9046f4a8d095c31884bcf885}{operator()}} (const \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}} \&) const
+\item 
+bool \doxymbox{\hyperlink{class_gamma_1_1_game_level_acf8317343ebfece63a275a51480c80f7}{point\+\_\+access}} (int, int) const
+\item 
+bool \doxymbox{\hyperlink{class_gamma_1_1_game_level_a5bd5ee8ae76b9b108b17148b14be49ac}{point\+\_\+on\+\_\+map}} (double, double) const
+\item 
+bool \doxymbox{\hyperlink{class_gamma_1_1_game_level_a006451bd2b2c8897a5d9952fb4d85d14}{is\+\_\+transparent}} (double, double) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std::\+ofstream \& \doxymbox{\hyperlink{class_gamma_1_1_game_level_a2da758fd4a5a7b2dfbc11b91f3102067}{save}} (std::\+ofstream \&) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std::\+ofstream \& \doxymbox{\hyperlink{class_gamma_1_1_game_level_a3b2027262cee1d8caa2b19854cdc4321}{operator$<$$<$}} (std::\+ofstream \&ofile, const \doxymbox{\hyperlink{class_gamma_1_1_game_level_a69f86db6205951906c980a327aef5de3}{Game\+Level}} \&level)
+\end{DoxyCompactItemize}
+
+
+\label{class_gamma_1_1_game_level_doc-constructors}
+\Hypertarget{class_gamma_1_1_game_level_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_gamma_1_1_game_level_a69f86db6205951906c980a327aef5de3}\index{Gamma::GameLevel@{Gamma::GameLevel}!GameLevel@{GameLevel}}
+\index{GameLevel@{GameLevel}!Gamma::GameLevel@{Gamma::GameLevel}}
+\doxysubsubsection{\texorpdfstring{GameLevel()}{GameLevel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_level_a69f86db6205951906c980a327aef5de3} 
+Game\+Level::\+\+Game\+Level (\begin{DoxyParamCaption}\item[{int}]{l\+\_\+}{ = {\ttfamily 100}, }\item[{int}]{h\+\_\+}{ = {\ttfamily 100}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_gamma_1_1_game_level_af615a65e4c3ae979d963e1b7dbac05b1}\index{Gamma::GameLevel@{Gamma::GameLevel}!GameLevel@{GameLevel}}
+\index{GameLevel@{GameLevel}!Gamma::GameLevel@{Gamma::GameLevel}}
+\doxysubsubsection{\texorpdfstring{GameLevel()}{GameLevel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_level_af615a65e4c3ae979d963e1b7dbac05b1} 
+Game\+Level::\+\+Game\+Level (\begin{DoxyParamCaption}\item[{std::\+ifstream \&}]{file}{}\end{DoxyParamCaption})}
+
+
+
+\label{class_gamma_1_1_game_level_doc-func-members}
+\Hypertarget{class_gamma_1_1_game_level_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_gamma_1_1_game_level_a33f3a501c9f4c1c5260beb6c1abccb2a}\index{Gamma::GameLevel@{Gamma::GameLevel}!add\_item@{add\_item}}
+\index{add\_item@{add\_item}!Gamma::GameLevel@{Gamma::GameLevel}}
+\doxysubsubsection{\texorpdfstring{add\_item()}{add\_item()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_level_a33f3a501c9f4c1c5260beb6c1abccb2a} 
+bool Game\+Level::\+add\+\_\+item (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_gamma_1_1_item}{Item}} \texorpdfstring{$\ast$}{*}}]{item}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_gamma_1_1_game_level_aaeb714df7319d075d5d12d862c811a96}\index{Gamma::GameLevel@{Gamma::GameLevel}!get\_items@{get\_items}}
+\index{get\_items@{get\_items}!Gamma::GameLevel@{Gamma::GameLevel}}
+\doxysubsubsection{\texorpdfstring{get\_items()}{get\_items()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_level_aaeb714df7319d075d5d12d862c811a96} 
+My\+\_\+vector$<$ \doxymbox{\hyperlink{class_gamma_1_1_item}{Item}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} Game\+Level::\+get\+\_\+items (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}} \&}]{p}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_gamma_1_1_game_level_a006451bd2b2c8897a5d9952fb4d85d14}\index{Gamma::GameLevel@{Gamma::GameLevel}!is\_transparent@{is\_transparent}}
+\index{is\_transparent@{is\_transparent}!Gamma::GameLevel@{Gamma::GameLevel}}
+\doxysubsubsection{\texorpdfstring{is\_transparent()}{is\_transparent()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_level_a006451bd2b2c8897a5d9952fb4d85d14} 
+bool Game\+Level::\+is\+\_\+transparent (\begin{DoxyParamCaption}\item[{double}]{y}{, }\item[{double}]{x}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_gamma_1_1_game_level_ac712ce1b9046f4a8d095c31884bcf885}\index{Gamma::GameLevel@{Gamma::GameLevel}!operator()@{operator()}}
+\index{operator()@{operator()}!Gamma::GameLevel@{Gamma::GameLevel}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_level_ac712ce1b9046f4a8d095c31884bcf885} 
+const \doxymbox{\hyperlink{struct_gamma_1_1_cell}{Cell}} \& Game\+Level::\+operator() (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}} \&}]{p}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_gamma_1_1_game_level_a24af08c394dc70dae11e6b1f277f4f80}\index{Gamma::GameLevel@{Gamma::GameLevel}!operator\+[]\+@{operator[]}}
+\index{operator\+[]\+@{operator[]}!Gamma::GameLevel@{Gamma::GameLevel}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_level_a24af08c394dc70dae11e6b1f277f4f80} 
+\doxymbox{\hyperlink{struct_gamma_1_1_cell}{Cell}} \& Game\+Level::\+operator\+[$\,$]\+ (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}} \&}]{p}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_gamma_1_1_game_level_acf8317343ebfece63a275a51480c80f7}\index{Gamma::GameLevel@{Gamma::GameLevel}!point\_access@{point\_access}}
+\index{point\_access@{point\_access}!Gamma::GameLevel@{Gamma::GameLevel}}
+\doxysubsubsection{\texorpdfstring{point\_access()}{point\_access()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_level_acf8317343ebfece63a275a51480c80f7} 
+bool Game\+Level::\+point\+\_\+access (\begin{DoxyParamCaption}\item[{int}]{y}{, }\item[{int}]{x}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_gamma_1_1_game_level_a5bd5ee8ae76b9b108b17148b14be49ac}\index{Gamma::GameLevel@{Gamma::GameLevel}!point\_on\_map@{point\_on\_map}}
+\index{point\_on\_map@{point\_on\_map}!Gamma::GameLevel@{Gamma::GameLevel}}
+\doxysubsubsection{\texorpdfstring{point\_on\_map()}{point\_on\_map()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_level_a5bd5ee8ae76b9b108b17148b14be49ac} 
+bool Game\+Level::\+point\+\_\+on\+\_\+map (\begin{DoxyParamCaption}\item[{double}]{y}{, }\item[{double}]{x}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_gamma_1_1_game_level_a2da758fd4a5a7b2dfbc11b91f3102067}\index{Gamma::GameLevel@{Gamma::GameLevel}!save@{save}}
+\index{save@{save}!Gamma::GameLevel@{Gamma::GameLevel}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_level_a2da758fd4a5a7b2dfbc11b91f3102067} 
+std::\+ofstream \& Game\+Level::\+save (\begin{DoxyParamCaption}\item[{std::\+ofstream \&}]{ofile}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\label{class_gamma_1_1_game_level_doc-related-members}
+\Hypertarget{class_gamma_1_1_game_level_doc-related-members}
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_gamma_1_1_game_level_a3b2027262cee1d8caa2b19854cdc4321}\index{Gamma::GameLevel@{Gamma::GameLevel}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Gamma::GameLevel@{Gamma::GameLevel}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_game_level_a3b2027262cee1d8caa2b19854cdc4321} 
+std::\+ofstream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std::\+ofstream \&}]{ofile}{, }\item[{const \doxymbox{\hyperlink{class_gamma_1_1_game_level_a69f86db6205951906c980a327aef5de3}{Game\+Level}} \&}]{level}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+src/\+\doxymbox{\hyperlink{_session_8h}{Session.\+h}}\item 
+src/\+\doxymbox{\hyperlink{_session_8cpp}{Session.\+cpp}}\end{DoxyCompactItemize}

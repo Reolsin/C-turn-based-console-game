@@ -1,0 +1,85 @@
+\doxysection{Items.\+h}
+\hypertarget{_items_8h_source}{}\label{_items_8h_source}\index{src/Items.h@{src/Items.h}}
+\doxymbox{\hyperlink{_items_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_declarations_8h}{Declarations.h}}"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_gamma}{Gamma}}\ \{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_gamma_1_1_item_ae94dbef581016605c4455c108f177a0a}{Item}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ weight,\ use\_points;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1_item_ae94dbef581016605c4455c108f177a0a}{Item}}()\ :\ name(\textcolor{stringliteral}{"{}noname"{}}),\ weight(),\ use\_points()\ \{\}}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1_item_ae94dbef581016605c4455c108f177a0a}{Item}}(std::string,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1_item_ae94dbef581016605c4455c108f177a0a}{Item}}(std::ifstream\&);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::ostream\&\ \doxymbox{\hyperlink{class_gamma_1_1_item_add54f385dce24c32a6474e5e084d5fef}{display}}(std::ostream\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::ofstream\&\ \doxymbox{\hyperlink{class_gamma_1_1_item_a612b37856974410a0a3f19b310a42d8e}{save}}(std::ofstream\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_gamma_1_1_item_ad9bee17c6e02e2fb56e076e0d47e04ec}{up}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ use\_points;\ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_gamma_1_1_item_a9d76090492359b72bc1bea9317eb74f5}{w}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ weight;\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::string*\ \doxymbox{\hyperlink{class_gamma_1_1_item_a20b8ad48a95f22671956f499f92efa04}{use}}(\doxymbox{\hyperlink{class_gamma_1_1_operative}{Operative}}*)\ =\ 0;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ std::ofstream\&\ \doxymbox{\hyperlink{class_gamma_1_1_item_af5c40a2c3077aa58fb8a24a14f0c34bb}{operator<<}}(std::ofstream\&\ ofile,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_gamma_1_1_item_ae94dbef581016605c4455c108f177a0a}{Item}}\&\ item)\ \{\ \textcolor{keywordflow}{return}\ item.\doxymbox{\hyperlink{class_gamma_1_1_item_a612b37856974410a0a3f19b310a42d8e}{save}}(ofile);\ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \doxymbox{\hyperlink{class_gamma_1_1_item_a29c2fddb76908e5a5e59f0a7fe7b8dd6}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_gamma_1_1_item_ae94dbef581016605c4455c108f177a0a}{Item}}\&\ item)\ \{\ \textcolor{keywordflow}{return}\ item.\doxymbox{\hyperlink{class_gamma_1_1_item_add54f385dce24c32a6474e5e084d5fef}{display}}(os);\ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_gamma_1_1weapon_a6e7c2a369bf8490caf2fe001dedfb888}{weapon}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_gamma_1_1_item_ae94dbef581016605c4455c108f177a0a}{Item}}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cur\_clip\_ammo,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ full\_clip\_ammo,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ damage,\ reload\_points;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ ammo\_type;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::ostream\&\ \doxymbox{\hyperlink{class_gamma_1_1weapon_ae7b71d97037cb5d4e32cf2106d1b329e}{display}}(std::ostream\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::ofstream\&\ \doxymbox{\hyperlink{class_gamma_1_1weapon_a1cdccf93d203667aa19236132a5d4ade}{save}}(std::ofstream\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1weapon_a6e7c2a369bf8490caf2fe001dedfb888}{weapon}}()\ :\ \doxymbox{\hyperlink{class_gamma_1_1_item_ae94dbef581016605c4455c108f177a0a}{Item}}(),\ cur\_clip\_ammo(),\ full\_clip\_ammo(),\ damage(),\ reload\_points(),\ ammo\_type()\ \{\}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1weapon_a6e7c2a369bf8490caf2fe001dedfb888}{weapon}}(std::string\ n,\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_gamma_1_1_item_a9d76090492359b72bc1bea9317eb74f5}{w}},\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_gamma_1_1_item_ad9bee17c6e02e2fb56e076e0d47e04ec}{up}},\ \textcolor{keywordtype}{int}\ cur,\ \textcolor{keywordtype}{int}\ full,\ \textcolor{keywordtype}{int}\ d,\ \textcolor{keywordtype}{int}\ rp,\ \textcolor{keywordtype}{double}\ a\_type);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1weapon_a6e7c2a369bf8490caf2fe001dedfb888}{weapon}}(std::ifstream\&);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_gamma_1_1weapon_a4f6bcb17ee39009e96828e74649ea819}{deal\_damage}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_gamma_1_1weapon_ac17a7552dea6b35f37615f9996089ccb}{reload}}(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{double});}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::string*\ \doxymbox{\hyperlink{class_gamma_1_1weapon_abaa022763af8a07d593a231b35645283}{use}}(\doxymbox{\hyperlink{class_gamma_1_1_operative}{Operative}}*);}
+\DoxyCodeLine{00047\ \ \ \ \ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_gamma_1_1aidkit_a005b7e7e7b2cf9a70cdf6f9d45a55c5d}{aidkit}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_gamma_1_1_item_ae94dbef581016605c4455c108f177a0a}{Item}}\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ heal\_amount,\ charges,\ full\_charges;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::ostream\&\ \doxymbox{\hyperlink{class_gamma_1_1aidkit_a477c88cc675dad9f613af6795de425df}{display}}(std::ostream\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::ofstream\&\ \doxymbox{\hyperlink{class_gamma_1_1aidkit_a488944086217b5aa7d0461d6a11f3a7f}{save}}(std::ofstream\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1aidkit_a005b7e7e7b2cf9a70cdf6f9d45a55c5d}{aidkit}}()\ :\ \doxymbox{\hyperlink{class_gamma_1_1_item_ae94dbef581016605c4455c108f177a0a}{Item}}(),\ heal\_amount(),\ charges(),\ full\_charges()\ \{\}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1aidkit_a005b7e7e7b2cf9a70cdf6f9d45a55c5d}{aidkit}}(std::string\ n,\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_gamma_1_1_item_a9d76090492359b72bc1bea9317eb74f5}{w}},\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_gamma_1_1_item_ad9bee17c6e02e2fb56e076e0d47e04ec}{up}},\ \textcolor{keywordtype}{int}\ cur,\ \textcolor{keywordtype}{int}\ ful,\ \textcolor{keywordtype}{int}\ heal);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1aidkit_a005b7e7e7b2cf9a70cdf6f9d45a55c5d}{aidkit}}(std::ifstream\&);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::string*\ \doxymbox{\hyperlink{class_gamma_1_1aidkit_a7535d497d52262f5ca49a3dd9fcc55ea}{use}}(\doxymbox{\hyperlink{class_gamma_1_1_operative}{Operative}}*);}
+\DoxyCodeLine{00062\ \ \ \ \ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_gamma_1_1ammunition_a2e059db1c8378556b29adb22b80cbb87}{ammunition}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_gamma_1_1_item_ae94dbef581016605c4455c108f177a0a}{Item}}\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cur\_count,\ full\_count;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ ammo\_type;}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::ostream\&\ \doxymbox{\hyperlink{class_gamma_1_1ammunition_a3f71e847a49766c913c4bd6ea723fe1c}{display}}(std::ostream\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::ofstream\&\ \doxymbox{\hyperlink{class_gamma_1_1ammunition_a631d7beedca01878801c5974ff9ac4f1}{save}}(std::ofstream\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1ammunition_a2e059db1c8378556b29adb22b80cbb87}{ammunition}}()\ :\ \doxymbox{\hyperlink{class_gamma_1_1_item_ae94dbef581016605c4455c108f177a0a}{Item}}(),\ cur\_count(),\ full\_count(),\ ammo\_type()\ \{\}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1ammunition_a2e059db1c8378556b29adb22b80cbb87}{ammunition}}(std::string\ n,\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_gamma_1_1_item_a9d76090492359b72bc1bea9317eb74f5}{w}},\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_gamma_1_1_item_ad9bee17c6e02e2fb56e076e0d47e04ec}{up}},\ \textcolor{keywordtype}{int}\ cur,\ \textcolor{keywordtype}{int}\ ful,\ \textcolor{keywordtype}{double}\ a\_type);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1ammunition_a2e059db1c8378556b29adb22b80cbb87}{ammunition}}(std::ifstream\&);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::string*\ \doxymbox{\hyperlink{class_gamma_1_1ammunition_abcc9a884a13cf4a8591481d27d58ef1d}{use}}(\doxymbox{\hyperlink{class_gamma_1_1_operative}{Operative}}*);}
+\DoxyCodeLine{00078\ \ \ \ \ \};}
+\DoxyCodeLine{00079\ \}}
+
+\end{DoxyCode}

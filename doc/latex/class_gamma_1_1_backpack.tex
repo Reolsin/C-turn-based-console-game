@@ -1,0 +1,140 @@
+\doxysection{Gamma::\+Backpack Class Reference}
+\hypertarget{class_gamma_1_1_backpack}{}\label{class_gamma_1_1_backpack}\index{Gamma::Backpack@{Gamma::Backpack}}
+
+
+{\ttfamily \+\#include $<$Units.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_backpack_a8fa19b9cd26959dd1eb371e45443bd55}{Backpack}} (int size=4)
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_backpack_aac33cac223bcf15451d221fccdd719e3}{Backpack}} (std::\+ifstream \&)
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_backpack_a9f4fb7ea5745cacd52f4a47074099f49}{\texorpdfstring{$\sim$}{\string~}\+Backpack}} ()
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_backpack_ad3702e550eb6708fe0d69c686e856b0f}{Backpack}} (Backpack \&\&bp) noexcept
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_backpack_a8fa19b9cd26959dd1eb371e45443bd55}{Backpack}} \& \doxymbox{\hyperlink{class_gamma_1_1_backpack_adb3baceecff13147a2f7fadd42e09eb0}{operator=}} (\doxymbox{\hyperlink{class_gamma_1_1_backpack_a8fa19b9cd26959dd1eb371e45443bd55}{Backpack}} \&\&) noexcept
+\item 
+My\+\_\+vector$<$ \doxymbox{\hyperlink{class_gamma_1_1_item}{Item}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_gamma_1_1_backpack_a18021eabd8d3617cdf627d16e321fde2}{get\+\_\+items}} ()
+\item 
+int \doxymbox{\hyperlink{class_gamma_1_1_backpack_a94fcf9588b7546b7ae3228528ed52917}{w}} () const
+\item 
+bool \doxymbox{\hyperlink{class_gamma_1_1_backpack_a475de901d74ff9c116647e2b33cdca3e}{not\+\_\+full}} () const
+\item 
+bool \doxymbox{\hyperlink{class_gamma_1_1_backpack_afe9063eea3b2180066eff0aa4d3214e2}{put\+\_\+item}} (\doxymbox{\hyperlink{class_gamma_1_1_item}{Item}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_item}{Item}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_gamma_1_1_backpack_a7007529776e35e5c1f27d2ac3401e137}{drop\+\_\+item}} (int)
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_item}{Item}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_gamma_1_1_backpack_a2c96575527d44826570dfe5a2bc15e3e}{operator\+[$\,$]\+}} (int) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std::\+ofstream \& \doxymbox{\hyperlink{class_gamma_1_1_backpack_a6892d8f09239df18b31da8384a16f61a}{save}} (std::\+ofstream \&) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std::\+ofstream \& \doxymbox{\hyperlink{class_gamma_1_1_backpack_a198040b7a8dc788f62937e03e368d3a6}{operator$<$$<$}} (std::\+ofstream \&ofile, const \doxymbox{\hyperlink{class_gamma_1_1_backpack_a8fa19b9cd26959dd1eb371e45443bd55}{Backpack}} \&bp)
+\end{DoxyCompactItemize}
+
+
+\label{class_gamma_1_1_backpack_doc-constructors}
+\Hypertarget{class_gamma_1_1_backpack_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_gamma_1_1_backpack_a8fa19b9cd26959dd1eb371e45443bd55}\index{Gamma::Backpack@{Gamma::Backpack}!Backpack@{Backpack}}
+\index{Backpack@{Backpack}!Gamma::Backpack@{Gamma::Backpack}}
+\doxysubsubsection{\texorpdfstring{Backpack()}{Backpack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_backpack_a8fa19b9cd26959dd1eb371e45443bd55} 
+Backpack::\+\+Backpack (\begin{DoxyParamCaption}\item[{int}]{size}{ = {\ttfamily 4}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_gamma_1_1_backpack_aac33cac223bcf15451d221fccdd719e3}\index{Gamma::Backpack@{Gamma::Backpack}!Backpack@{Backpack}}
+\index{Backpack@{Backpack}!Gamma::Backpack@{Gamma::Backpack}}
+\doxysubsubsection{\texorpdfstring{Backpack()}{Backpack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_backpack_aac33cac223bcf15451d221fccdd719e3} 
+Backpack::\+\+Backpack (\begin{DoxyParamCaption}\item[{std::\+ifstream \&}]{file}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_gamma_1_1_backpack_a9f4fb7ea5745cacd52f4a47074099f49}\index{Gamma::Backpack@{Gamma::Backpack}!````~Backpack@{\texorpdfstring{$\sim$}{\string~}Backpack}}
+\index{````~Backpack@{\texorpdfstring{$\sim$}{\string~}Backpack}!Gamma::Backpack@{Gamma::Backpack}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Backpack()}{\string~Backpack()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_backpack_a9f4fb7ea5745cacd52f4a47074099f49} 
+Backpack::\+\texorpdfstring{$\sim$}{\string~}\+Backpack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_gamma_1_1_backpack_ad3702e550eb6708fe0d69c686e856b0f}\index{Gamma::Backpack@{Gamma::Backpack}!Backpack@{Backpack}}
+\index{Backpack@{Backpack}!Gamma::Backpack@{Gamma::Backpack}}
+\doxysubsubsection{\texorpdfstring{Backpack()}{Backpack()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_backpack_ad3702e550eb6708fe0d69c686e856b0f} 
+Gamma::\+\+Backpack::\+\+Backpack (\begin{DoxyParamCaption}\item[{Backpack \&\&}]{bp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\label{class_gamma_1_1_backpack_doc-func-members}
+\Hypertarget{class_gamma_1_1_backpack_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_gamma_1_1_backpack_a7007529776e35e5c1f27d2ac3401e137}\index{Gamma::Backpack@{Gamma::Backpack}!drop\_item@{drop\_item}}
+\index{drop\_item@{drop\_item}!Gamma::Backpack@{Gamma::Backpack}}
+\doxysubsubsection{\texorpdfstring{drop\_item()}{drop\_item()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_backpack_a7007529776e35e5c1f27d2ac3401e137} 
+\doxymbox{\hyperlink{class_gamma_1_1_item}{Item}} \texorpdfstring{$\ast$}{*} Backpack::\+drop\+\_\+item (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_gamma_1_1_backpack_a18021eabd8d3617cdf627d16e321fde2}\index{Gamma::Backpack@{Gamma::Backpack}!get\_items@{get\_items}}
+\index{get\_items@{get\_items}!Gamma::Backpack@{Gamma::Backpack}}
+\doxysubsubsection{\texorpdfstring{get\_items()}{get\_items()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_backpack_a18021eabd8d3617cdf627d16e321fde2} 
+My\+\_\+vector$<$ \doxymbox{\hyperlink{class_gamma_1_1_item}{Item}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} Gamma::\+\+Backpack::\+get\+\_\+items (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_gamma_1_1_backpack_a475de901d74ff9c116647e2b33cdca3e}\index{Gamma::Backpack@{Gamma::Backpack}!not\_full@{not\_full}}
+\index{not\_full@{not\_full}!Gamma::Backpack@{Gamma::Backpack}}
+\doxysubsubsection{\texorpdfstring{not\_full()}{not\_full()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_backpack_a475de901d74ff9c116647e2b33cdca3e} 
+bool Gamma::\+\+Backpack::\+not\+\_\+full (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_gamma_1_1_backpack_adb3baceecff13147a2f7fadd42e09eb0}\index{Gamma::Backpack@{Gamma::Backpack}!operator=@{operator=}}
+\index{operator=@{operator=}!Gamma::Backpack@{Gamma::Backpack}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_backpack_adb3baceecff13147a2f7fadd42e09eb0} 
+\doxymbox{\hyperlink{class_gamma_1_1_backpack_a8fa19b9cd26959dd1eb371e45443bd55}{Backpack}} \& Backpack::\+operator= (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_gamma_1_1_backpack_a8fa19b9cd26959dd1eb371e45443bd55}{Backpack}} \&\&}]{bp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_gamma_1_1_backpack_a2c96575527d44826570dfe5a2bc15e3e}\index{Gamma::Backpack@{Gamma::Backpack}!operator\+[]\+@{operator[]}}
+\index{operator\+[]\+@{operator[]}!Gamma::Backpack@{Gamma::Backpack}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_backpack_a2c96575527d44826570dfe5a2bc15e3e} 
+\doxymbox{\hyperlink{class_gamma_1_1_item}{Item}} \texorpdfstring{$\ast$}{*} Backpack::\+operator\+[$\,$]\+ (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_gamma_1_1_backpack_afe9063eea3b2180066eff0aa4d3214e2}\index{Gamma::Backpack@{Gamma::Backpack}!put\_item@{put\_item}}
+\index{put\_item@{put\_item}!Gamma::Backpack@{Gamma::Backpack}}
+\doxysubsubsection{\texorpdfstring{put\_item()}{put\_item()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_backpack_afe9063eea3b2180066eff0aa4d3214e2} 
+bool Backpack::\+put\+\_\+item (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_gamma_1_1_item}{Item}} \texorpdfstring{$\ast$}{*}}]{item}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_gamma_1_1_backpack_a6892d8f09239df18b31da8384a16f61a}\index{Gamma::Backpack@{Gamma::Backpack}!save@{save}}
+\index{save@{save}!Gamma::Backpack@{Gamma::Backpack}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_backpack_a6892d8f09239df18b31da8384a16f61a} 
+std::\+ofstream \& Backpack::\+save (\begin{DoxyParamCaption}\item[{std::\+ofstream \&}]{ofile}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_gamma_1_1_backpack_a94fcf9588b7546b7ae3228528ed52917}\index{Gamma::Backpack@{Gamma::Backpack}!w@{w}}
+\index{w@{w}!Gamma::Backpack@{Gamma::Backpack}}
+\doxysubsubsection{\texorpdfstring{w()}{w()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_backpack_a94fcf9588b7546b7ae3228528ed52917} 
+int Gamma::\+\+Backpack::\+w (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{class_gamma_1_1_backpack_doc-related-members}
+\Hypertarget{class_gamma_1_1_backpack_doc-related-members}
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_gamma_1_1_backpack_a198040b7a8dc788f62937e03e368d3a6}\index{Gamma::Backpack@{Gamma::Backpack}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Gamma::Backpack@{Gamma::Backpack}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_backpack_a198040b7a8dc788f62937e03e368d3a6} 
+std::\+ofstream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std::\+ofstream \&}]{ofile}{, }\item[{const \doxymbox{\hyperlink{class_gamma_1_1_backpack_a8fa19b9cd26959dd1eb371e45443bd55}{Backpack}} \&}]{bp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+src/\+\doxymbox{\hyperlink{_units_8h}{Units.\+h}}\item 
+src/\+\doxymbox{\hyperlink{_units_8cpp}{Units.\+cpp}}\end{DoxyCompactItemize}

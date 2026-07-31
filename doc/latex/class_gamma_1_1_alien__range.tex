@@ -1,0 +1,160 @@
+\doxysection{Gamma::\+Alien\+\_\+range Class Reference}
+\hypertarget{class_gamma_1_1_alien__range}{}\label{class_gamma_1_1_alien__range}\index{Gamma::Alien\_range@{Gamma::Alien\_range}}
+
+
+{\ttfamily \+\#include $<$Units.\+h$>$}
+
+Inheritance diagram for Gamma::\+Alien\+\_\+range:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_gamma_1_1_alien__range}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_alien__range_a0d0cc5828198db250e1900e26187f033}{Alien\+\_\+range}} ()
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_alien__range_a33dffe1ecbfa677ee012fb4dc6108ce6}{Alien\+\_\+range}} (std::\+string n, int x, int y, int cur\+\_\+hp, int hp, int cur\+\_\+mp, int mp, int r, int move, \doxymbox{\hyperlink{class_gamma_1_1weapon}{weapon}} \texorpdfstring{$\ast$}{*}, double ac)
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_alien__range_ace9c3addd9d0b15e1784023ebb1e393d}{Alien\+\_\+range}} (std::\+ifstream \&file)
+\item 
+virtual \doxymbox{\hyperlink{class_gamma_1_1_alien__range_aa05964852a4ca3289794b6867c8df8a9}{\texorpdfstring{$\sim$}{\string~}\+Alien\+\_\+range}} ()
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1weapon}{weapon}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_gamma_1_1_alien__range_a980088396093f8dbef8415299fd528aa}{swap\+\_\+gun}} (\doxymbox{\hyperlink{class_gamma_1_1weapon}{weapon}} \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_gamma_1_1_attack___unit}{Gamma::\+\+Attack\+\_\+\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+const std::\+string \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_gamma_1_1_attack___unit_a096a9dae42a7f391c59eeed400d2f841}{attack}} (\doxymbox{\hyperlink{class_gamma_1_1_unit_a776875a0ddd7da3441b293958e6127e0}{Unit}} \texorpdfstring{$\ast$}{*})
+\item 
+const std::\+string \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_gamma_1_1_attack___unit_a015e1f1a29a9ec334f7800273772f9af}{attack}} (\doxymbox{\hyperlink{struct_gamma_1_1_cell}{Cell}} \&)
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1weapon}{weapon}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_gamma_1_1_attack___unit_ac82855e10d1a9403eb3163edceb53ec1}{get\+\_\+gun}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_gamma_1_1_unit}{Gamma::\+\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_gamma_1_1_unit_a0a7f1074952a0bcf6dd606c2bc4677b4}{\texorpdfstring{$\sim$}{\string~}\+Unit}} ()
+\item 
+bool \doxymbox{\hyperlink{class_gamma_1_1_unit_a9d5467faa30e36f8cd07cd592365d889}{move}} (const \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}} \&)
+\item 
+\doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}} \doxymbox{\hyperlink{class_gamma_1_1_unit_a4a1926decfb9389130bc5056d203083e}{pos}} () const
+\item 
+int \doxymbox{\hyperlink{class_gamma_1_1_unit_ad703a35f81eed60cf6f4372b305bde20}{vision}} () const
+\item 
+void \doxymbox{\hyperlink{class_gamma_1_1_unit_a3d1fdedb7cf63ea76a867b44c1a97e51}{refresh}} ()
+\item 
+int \doxymbox{\hyperlink{class_gamma_1_1_unit_aa6dd2feb3133f07f4e4dbae2dd4fb2b5}{change\+\_\+\+HP}} (int)
+\item 
+void \doxymbox{\hyperlink{class_gamma_1_1_unit_a6bb4882737ca6261357c876b2fd194da}{change\+\_\+\+MP}} (int use\+\_\+points)
+\item 
+bool \doxymbox{\hyperlink{class_gamma_1_1_unit_a90cd0804bcd9e05ad6185a84a647c9d1}{check\+\_\+\+MP}} (int MP) const
+\item 
+bool \doxymbox{\hyperlink{class_gamma_1_1_unit_a4f22e638bc154edca3d103be5f11ac6e}{is\+\_\+alive}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_gamma_1_1_unit_a1f77372e256cbffa2e217668bf443622}{name\+\_\+}} () const
+\item 
+char \doxymbox{\hyperlink{class_gamma_1_1_unit_a6f062b99c1e9eaedac16bed6b6cf5bdf}{avatar}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std::\+ostream \& \doxymbox{\hyperlink{class_gamma_1_1_alien__range_ad64f9240d2c4ef5c63cdecc50f183934}{display}} (std::\+ostream \&) const
+\item 
+virtual std::\+ofstream \& \doxymbox{\hyperlink{class_gamma_1_1_alien__range_a759859441996bfc37487c7130fa64236}{save}} (std::\+ofstream \&) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_gamma_1_1_attack___unit}{Gamma::\+\+Attack\+\_\+\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_attack___unit_a8ab65199dc97c24204513442a95b6fd6}{Attack\+\_\+\+Unit}} ()
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_attack___unit_ae6cc8cf2c1e803c947ae81a6f92868cb}{Attack\+\_\+\+Unit}} (double ac, \doxymbox{\hyperlink{class_gamma_1_1weapon}{weapon}} \texorpdfstring{$\ast$}{*}g)
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_attack___unit_a61b7e986add87aefb57a3181f20ca61a}{Attack\+\_\+\+Unit}} (std::\+ifstream \&)
+\item 
+virtual \doxymbox{\hyperlink{class_gamma_1_1_attack___unit_a18939404de9fbcc51874a9fd987bd841}{\texorpdfstring{$\sim$}{\string~}\+Attack\+\_\+\+Unit}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_gamma_1_1_unit}{Gamma::\+\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_unit_a776875a0ddd7da3441b293958e6127e0}{Unit}} ()
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_unit_aea062a8c86fab0ac8b6f790de4b14ea6}{Unit}} (std::\+string n, int x, int y, int cur\+\_\+hp, int hp, int cur\+\_\+mp, int mp, int r, int move)
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1_unit_ad9627767602459b116f783c5cc88764d}{Unit}} (std::\+ifstream \&)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_gamma_1_1_attack___unit}{Gamma::\+\+Attack\+\_\+\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{class_gamma_1_1_attack___unit_a324afe2b73b6d0e090a5855b9ffcf661}{accuracy}}
+\item 
+\doxymbox{\hyperlink{class_gamma_1_1weapon}{weapon}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_gamma_1_1_attack___unit_af808891840e9103c0850d0320d529deb}{gun}}
+\end{DoxyCompactItemize}
+
+
+\label{class_gamma_1_1_alien__range_doc-constructors}
+\Hypertarget{class_gamma_1_1_alien__range_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_gamma_1_1_alien__range_a0d0cc5828198db250e1900e26187f033}\index{Gamma::Alien\_range@{Gamma::Alien\_range}!Alien\_range@{Alien\_range}}
+\index{Alien\_range@{Alien\_range}!Gamma::Alien\_range@{Gamma::Alien\_range}}
+\doxysubsubsection{\texorpdfstring{Alien\_range()}{Alien\_range()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_alien__range_a0d0cc5828198db250e1900e26187f033} 
+Gamma::\+\+Alien\+\_\+range::\+\+Alien\+\_\+range (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_gamma_1_1_alien__range_a33dffe1ecbfa677ee012fb4dc6108ce6}\index{Gamma::Alien\_range@{Gamma::Alien\_range}!Alien\_range@{Alien\_range}}
+\index{Alien\_range@{Alien\_range}!Gamma::Alien\_range@{Gamma::Alien\_range}}
+\doxysubsubsection{\texorpdfstring{Alien\_range()}{Alien\_range()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_alien__range_a33dffe1ecbfa677ee012fb4dc6108ce6} 
+Alien\+\_\+range::\+\+Alien\+\_\+range (\begin{DoxyParamCaption}\item[{std::\+string}]{n}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{cur\+\_\+hp}{, }\item[{int}]{hp}{, }\item[{int}]{cur\+\_\+mp}{, }\item[{int}]{mp}{, }\item[{int}]{r}{, }\item[{int}]{move}{, }\item[{\doxymbox{\hyperlink{class_gamma_1_1weapon}{weapon}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{double}]{ac}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_gamma_1_1_alien__range_ace9c3addd9d0b15e1784023ebb1e393d}\index{Gamma::Alien\_range@{Gamma::Alien\_range}!Alien\_range@{Alien\_range}}
+\index{Alien\_range@{Alien\_range}!Gamma::Alien\_range@{Gamma::Alien\_range}}
+\doxysubsubsection{\texorpdfstring{Alien\_range()}{Alien\_range()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_alien__range_ace9c3addd9d0b15e1784023ebb1e393d} 
+Gamma::\+\+Alien\+\_\+range::\+\+Alien\+\_\+range (\begin{DoxyParamCaption}\item[{std::\+ifstream \&}]{file}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_gamma_1_1_alien__range_aa05964852a4ca3289794b6867c8df8a9}\index{Gamma::Alien\_range@{Gamma::Alien\_range}!````~Alien\_range@{\texorpdfstring{$\sim$}{\string~}Alien\_range}}
+\index{````~Alien\_range@{\texorpdfstring{$\sim$}{\string~}Alien\_range}!Gamma::Alien\_range@{Gamma::Alien\_range}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Alien\_range()}{\string~Alien\_range()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_alien__range_aa05964852a4ca3289794b6867c8df8a9} 
+virtual Gamma::\+\+Alien\+\_\+range::\+\texorpdfstring{$\sim$}{\string~}\+Alien\+\_\+range (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\label{class_gamma_1_1_alien__range_doc-func-members}
+\Hypertarget{class_gamma_1_1_alien__range_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_gamma_1_1_alien__range_ad64f9240d2c4ef5c63cdecc50f183934}\index{Gamma::Alien\_range@{Gamma::Alien\_range}!display@{display}}
+\index{display@{display}!Gamma::Alien\_range@{Gamma::Alien\_range}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_alien__range_ad64f9240d2c4ef5c63cdecc50f183934} 
+std::\+ostream \& Alien\+\_\+range::\+display (\begin{DoxyParamCaption}\item[{std::\+ostream \&}]{os}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_gamma_1_1_attack___unit_ad91914424f9f4e3b1704bae2a504327b}{Gamma::\+\+Attack\+\_\+\+Unit}}.
+
+\Hypertarget{class_gamma_1_1_alien__range_a759859441996bfc37487c7130fa64236}\index{Gamma::Alien\_range@{Gamma::Alien\_range}!save@{save}}
+\index{save@{save}!Gamma::Alien\_range@{Gamma::Alien\_range}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_alien__range_a759859441996bfc37487c7130fa64236} 
+std::\+ofstream \& Alien\+\_\+range::\+save (\begin{DoxyParamCaption}\item[{std::\+ofstream \&}]{ofile}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_gamma_1_1_attack___unit_aede9c173b5b81ef293479260885149ec}{Gamma::\+\+Attack\+\_\+\+Unit}}.
+
+\Hypertarget{class_gamma_1_1_alien__range_a980088396093f8dbef8415299fd528aa}\index{Gamma::Alien\_range@{Gamma::Alien\_range}!swap\_gun@{swap\_gun}}
+\index{swap\_gun@{swap\_gun}!Gamma::Alien\_range@{Gamma::Alien\_range}}
+\doxysubsubsection{\texorpdfstring{swap\_gun()}{swap\_gun()}}
+{\footnotesize\ttfamily \label{class_gamma_1_1_alien__range_a980088396093f8dbef8415299fd528aa} 
+\doxymbox{\hyperlink{class_gamma_1_1weapon}{weapon}} \texorpdfstring{$\ast$}{*} Alien\+\_\+range::\+swap\+\_\+gun (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_gamma_1_1weapon}{weapon}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+src/\+\doxymbox{\hyperlink{_units_8h}{Units.\+h}}\item 
+src/\+\doxymbox{\hyperlink{_units_8cpp}{Units.\+cpp}}\end{DoxyCompactItemize}

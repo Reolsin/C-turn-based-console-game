@@ -1,0 +1,138 @@
+\doxysection{Session.\+h}
+\hypertarget{_session_8h_source}{}\label{_session_8h_source}\index{src/Session.h@{src/Session.h}}
+\doxymbox{\hyperlink{_session_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_declarations_8h}{Declarations.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_units_8h}{Units.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_items_8h}{Items.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_gamma}{Gamma}}\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_gamma_1_1_cell_a70b72153a624ab2c9286a625c5de3aca}{Cell}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ My\_vector<Item*>\ \doxymbox{\hyperlink{struct_gamma_1_1_cell_a6dba5f1c776690cdd33e55f029d6ec4b}{Items}};}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{struct_gamma_1_1_cell_ad0de1b7b37e8957c23d9d788ae58e3d9}{cell\_type}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_gamma_1_1_cell_a70b72153a624ab2c9286a625c5de3aca}{Cell}}()\ :\ \doxymbox{\hyperlink{struct_gamma_1_1_cell_ad0de1b7b37e8957c23d9d788ae58e3d9}{cell\_type}}(\textcolor{stringliteral}{'.'})\ \{\}}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_gamma_1_1_cell_a9fa559f7a28e2b4336c6879ca09304d8}{\string~Cell}}();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_gamma_1_1_cell_a0ce0b093a0034bc857073f46bd955ee0}{add\_item}}(\doxymbox{\hyperlink{class_gamma_1_1_item}{Item}}*);}
+\DoxyCodeLine{00018\ \ \ \ \ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_gamma_1_1_game_level_a69f86db6205951906c980a327aef5de3}{GameLevel}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ My\_vector<My\_vector<Cell>>\ Map;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::ofstream\&\ \doxymbox{\hyperlink{class_gamma_1_1_game_level_a2da758fd4a5a7b2dfbc11b91f3102067}{save}}(std::ofstream\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1_game_level_a69f86db6205951906c980a327aef5de3}{GameLevel}}(\textcolor{keywordtype}{int}\ l\_\ =\ 100,\ \textcolor{keywordtype}{int}\ h\_\ =\ 100);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1_game_level_a69f86db6205951906c980a327aef5de3}{GameLevel}}(std::ifstream\&);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ My\_vector<Item*>*\ \doxymbox{\hyperlink{class_gamma_1_1_game_level_aaeb714df7319d075d5d12d862c811a96}{get\_items}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}}\&\ p);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_gamma_1_1_game_level_a33f3a501c9f4c1c5260beb6c1abccb2a}{add\_item}}(\doxymbox{\hyperlink{class_gamma_1_1_item}{Item}}*,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_gamma_1_1_cell}{Cell}}\&\ \doxymbox{\hyperlink{class_gamma_1_1_game_level_a24af08c394dc70dae11e6b1f277f4f80}{operator[]}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}}\&);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_gamma_1_1_cell}{Cell}}\&\ \doxymbox{\hyperlink{class_gamma_1_1_game_level_ac712ce1b9046f4a8d095c31884bcf885}{operator()}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}}\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_gamma_1_1_game_level_acf8317343ebfece63a275a51480c80f7}{point\_access}}(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_gamma_1_1_game_level_a5bd5ee8ae76b9b108b17148b14be49ac}{point\_on\_map}}(\textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_gamma_1_1_game_level_a006451bd2b2c8897a5d9952fb4d85d14}{is\_transparent}}(\textcolor{keywordtype}{double},\ \textcolor{keywordtype}{double})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ std::ofstream\&\ \doxymbox{\hyperlink{class_gamma_1_1_game_level_a3b2027262cee1d8caa2b19854cdc4321}{operator<<}}(std::ofstream\&\ ofile,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_gamma_1_1_game_level_a69f86db6205951906c980a327aef5de3}{GameLevel}}\&\ level)\ \{\ \textcolor{keywordflow}{return}\ level.\doxymbox{\hyperlink{class_gamma_1_1_game_level_a2da758fd4a5a7b2dfbc11b91f3102067}{save}}(ofile);\ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{namespace_gamma_a36a548c6424e0258aa13d75d26a6501c}{mode}}\ \{\ \doxymbox{\hyperlink{namespace_gamma_a36a548c6424e0258aa13d75d26a6501cac8d46d341bea4fd5bff866a65ff8aea9}{game}},\ \doxymbox{\hyperlink{namespace_gamma_a36a548c6424e0258aa13d75d26a6501ca7a1eabc3deb7fd02ceb1e16eafc41073}{inventory}},\ \doxymbox{\hyperlink{namespace_gamma_a36a548c6424e0258aa13d75d26a6501cafc7e987f23de5bd6562b7c0063cad659}{attack}},\ \doxymbox{\hyperlink{namespace_gamma_a36a548c6424e0258aa13d75d26a6501ca600d6af0f320a021dc494cfa2daca569}{take}},\ \doxymbox{\hyperlink{namespace_gamma_a36a548c6424e0258aa13d75d26a6501cac1aa50a4ff26d2fd59e69fff7b81f6bc}{loot}}\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ std::string\_view\ \doxymbox{\hyperlink{namespace_gamma_afad1ba8a466fe17e2847abf851d7207b}{colorToString}}(\doxymbox{\hyperlink{namespace_gamma_a36a548c6424e0258aa13d75d26a6501c}{mode}}\ m);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_gamma_1_1operation__code}{operation\_code}}\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_gamma_1_1operation__code_a01724eaf75ce6164ffea754928f8e4a7}{code}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_gamma_a36a548c6424e0258aa13d75d26a6501c}{mode}}\ \doxymbox{\hyperlink{struct_gamma_1_1operation__code_a911ded985b174bee089a8887e946bb78}{m}};}
+\DoxyCodeLine{00048\ \ \ \ \ \};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_gamma_1_1_compare_type}{CompareType}}\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{struct_gamma_1_1_compare_type_a54b0092324e1a23a4b08cf44124fd57a}{is\_transparent}}\ =\ std::true\_type;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_gamma_1_1_compare_type_ad5d67d0b65279cd0b1aeff7d09a893eb}{operator()}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_gamma_1_1operation__code}{operation\_code}}\&\ lhs,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_gamma_1_1operation__code}{operation\_code}}\&\ rhs)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00052\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (lhs.\doxymbox{\hyperlink{struct_gamma_1_1operation__code_a01724eaf75ce6164ffea754928f8e4a7}{code}}\ <\ rhs.\doxymbox{\hyperlink{struct_gamma_1_1operation__code_a01724eaf75ce6164ffea754928f8e4a7}{code}})\ ||\ ((lhs.\doxymbox{\hyperlink{struct_gamma_1_1operation__code_a01724eaf75ce6164ffea754928f8e4a7}{code}}\ ==\ rhs.\doxymbox{\hyperlink{struct_gamma_1_1operation__code_a01724eaf75ce6164ffea754928f8e4a7}{code}})\ \&\&\ (lhs.\doxymbox{\hyperlink{struct_gamma_1_1operation__code_a911ded985b174bee089a8887e946bb78}{m}}\ <\ rhs.\doxymbox{\hyperlink{struct_gamma_1_1operation__code_a911ded985b174bee089a8887e946bb78}{m}}));}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_gamma_1_1_game_session_a6b5e4df411d2b580206998a7c5d2cc18}{GameSession}}\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::map<\doxymbox{\hyperlink{struct_gamma_1_1operation__code}{operation\_code}},\ bool\ (\doxymbox{\hyperlink{class_gamma_1_1_game_session}{Gamma::GameSession}}::*)(),\ \doxymbox{\hyperlink{struct_gamma_1_1_compare_type}{CompareType}}>\ operation;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ con\_len;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string*\ message;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1_game_level}{GameLevel}}\ level;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1_unit}{Unit}}*\ current\_unit;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ current\_unit\_num;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}}\ attack\_cursor;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ My\_vector<My\_vector<char>>\ unit\_vision;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ My\_vector<Item*>*\ displayed\_items;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ My\_vector<Item**>\ lootmode\_items;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ disp\_items\_num;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ My\_vector<Unit*>\ player;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ My\_vector<Unit*>\ enemy;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_gamma_a36a548c6424e0258aa13d75d26a6501c}{mode}}\ current\_mode;}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ move(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}}\&);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ move\_up();}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ move\_down();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ move\_right();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ move\_left();}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ choose\_next();}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ choose\_previous();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ inventory\_init();}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ inventory\_drop();}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ inventory\_activate();}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ take\_init();}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ take\_activate();}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ loot\_init();}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ loot\_activate();}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ table\_choose\_up();}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ table\_choose\_down();}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ loot\_choose\_up();}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ loot\_choose\_down();}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ attack\_cursor\_move(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}}\&);}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ attack\_init();}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ attack\_activate();}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ attack\_cursor\_up();}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ attack\_cursor\_down();}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ attack\_cursor\_right();}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ attack\_cursor\_left();}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ close();}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ next\_turn();}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ exit();}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1_game_session_a6b5e4df411d2b580206998a7c5d2cc18}{GameSession}}()\ :\ con\_len(160),\ message(\doxymbox{\hyperlink{namespace_gamma_ac6390f927aeca78f42eaff11ba2f9ab5}{close\_mods}}),\ current\_unit\_num(0),\ current\_unit(nullptr),\ disp\_items\_num(0),\ displayed\_items(nullptr),\ attack\_cursor(),\ current\_mode(\doxymbox{\hyperlink{namespace_gamma_a36a548c6424e0258aa13d75d26a6501c}{mode}}::\doxymbox{\hyperlink{namespace_gamma_a36a548c6424e0258aa13d75d26a6501cac8d46d341bea4fd5bff866a65ff8aea9}{game}}),\ level()\ \{\}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1_game_session_a6b5e4df411d2b580206998a7c5d2cc18}{GameSession}}(std::ifstream\&);}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1_game_session_a13f91583aaee1462db49f9679b54ff52}{\string~GameSession}}();}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_gamma_1_1_unit}{Unit}}*\ \doxymbox{\hyperlink{class_gamma_1_1_game_session_ab3f4b4f347f92730eabf1896e60dc905}{alive\_unit\_here}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}}\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ My\_vector<Unit*>\ \doxymbox{\hyperlink{class_gamma_1_1_game_session_ac1c06470ed687002932a632350b1ef9a}{dead\_units\_here}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_gamma_1_1_point}{Point}}\&\ p)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_gamma_1_1_game_session_aba4bc28bccd3942a4c85a61ac632bfb0}{current\_unit\_is\_alive}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ current\_unit-\/>is\_alive();\ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ My\_vector<My\_vector<char>>\ \doxymbox{\hyperlink{class_gamma_1_1_game_session_adb31b9729a8cc5c1e69546ca47498c4b}{render\_vision}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_gamma_1_1_unit}{Unit}}*\ unit)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_gamma_1_1_game_session_ad5f6beec31781bde92d180161c61f86e}{execute}}(\textcolor{keywordtype}{int}\ button)\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (operation.count(\{\ button,\ current\_mode\ \})\ ==\ 1)}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this-\/>*operation.at(\{\ button,\ current\_mode\ \}))();}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_gamma_1_1_game_session_a213dd9d78fd5df7bbc9f2e87891e7213}{game\_end\_check}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_gamma_1_1_game_session_af579a4a1f05d07aa83e769a0bfa435d5}{draw}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_gamma_1_1_game_session_a63f7e3a0887ca52e66fbbac4dda5a23e}{save}}(std::ofstream\&);}
+\DoxyCodeLine{00131\ \ \ \ \ \};}
+\DoxyCodeLine{00132\ \}}
+
+\end{DoxyCode}
