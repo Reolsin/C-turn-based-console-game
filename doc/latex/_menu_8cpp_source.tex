@@ -1,0 +1,58 @@
+\doxysection{Menu.\+cpp}
+\hypertarget{_menu_8cpp_source}{}\label{_menu_8cpp_source}\index{src/Menu.cpp@{src/Menu.cpp}}
+\doxymbox{\hyperlink{_menu_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}My\_vector.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}conio.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ }My\_vect::My\_vector;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_menu_a028cb4587c2da5ab9d130b89d902d1d1}{Menu}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ std::string\ pointer;}
+\DoxyCodeLine{00009\ \ \ \ \ My\_vector<std::string>\ messages;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{void}\ show(\textcolor{keywordtype}{int}\ pos)}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0,\ n\ =\ (60\ -\/\ messages.size())\ /\ 2;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ messages.size();\ i++)\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ messages[i];}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pos\ ==\ i)}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ pointer;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{class_menu_a028cb4587c2da5ab9d130b89d902d1d1}{Menu}}(My\_vector<std::string>\ msgs,\ std::string\ p\ =\ \textcolor{stringliteral}{"{}<"{}})\ :\ \(\backslash\)}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ messages(msgs),\ pointer(p)\ \{\}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_menu_ae7f1235ed677af3dc3efa553e459eafa}{get\_recall}}()}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rc\ =\ 0;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ switcher;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ show(rc);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ switcher\ =\ \_getch();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (switcher\ ==\ 224)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ switcher\ =\ \_getch();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (switcher)\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 72:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rc\ =\ (messages.size()\ +\ rc\ -\/\ 1)\ \%\ messages.size();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 80:}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rc\ =\ (messages.size()\ +\ rc\ +\ 1)\ \%\ messages.size();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (switcher\ !=\ 13);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rc;}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_menu_a3a295636f71edbaf6dd726d858cae928}{is\_last}}(\textcolor{keywordtype}{int}\ n)\ \{\ \textcolor{keywordflow}{return}\ n\ ==\ messages.size()\ -\/\ 1;\ \}}
+\DoxyCodeLine{00052\ \};}
+
+\end{DoxyCode}
